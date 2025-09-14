@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img id="logo" src="logo.png" alt="Logo">
+    </div>
+    <h2>Place Your Order</h2>
+    <p class="subtitle">Hello! Choose your product below:</p>
+
+    <form id="orderForm">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone" required>
+
+      <label>Address</label>
+      <textarea id="address" placeholder="Enter your address" required></textarea>
+
+      <label>Product</label>
+      <select id="product">
+        <option value="Phone Case" data-price="10">Phone Case - ₹10</option>
+        <option value="Watch" data-price="20">Watch - ₹20</option>
+        <option value="Earphones" data-price="15">Earphones - ₹15</option>
+      </select>
+
+      <label>Quantity</label>
+      <input type="number" id="quantity" value="1" min="1">
+
+      <p id="totalPrice" class="totalPrice">Total Price: ₹10</p>
+
+      <button type="submit">Place Order</button>
+    </form>
+    <p class="success" id="successMsg">✅ Order Successful! You will receive your product in 7 days.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
