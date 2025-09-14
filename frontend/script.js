@@ -38,7 +38,7 @@ orderForm.addEventListener("submit", async (e) => {
 
   try {
     // Replace with your deployed backend URL
-    const backendURL = "https://backend-qvdzze8sw-anands-projects-10dbf9e6.vercel.app/api/orders";
+    const backendURL = "https://backend-iota-one-24.vercel.app/";
 
     const response = await fetch(backendURL, {
       method: "POST",
