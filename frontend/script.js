@@ -38,7 +38,7 @@ orderForm.addEventListener("submit", async (e) => {
 
   try {
     // Replace with your deployed backend URL
-    const backendURL = "https://order-app-1-hvdu.onrender.com";
+    const backendURL = "https://order-app-1-hvdu.onrender.com/orders";
 
     const response = await fetch(backendURL, {
       method: "POST",
