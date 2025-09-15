@@ -37,8 +37,8 @@ orderForm.addEventListener("submit", async (e) => {
   }
 
   try {
-    // Replace with your deployed backend URL
-    const backendURL = "https://order-app-1-hvdu.onrender.com/orders";
+    // ✅ Correct backend route — this matches your Express route
+    const backendURL = "https://order-app-1-hvdu.onrender.com/api/orders";
 
     const response = await fetch(backendURL, {
       method: "POST",
@@ -47,6 +47,7 @@ orderForm.addEventListener("submit", async (e) => {
     });
 
     const result = await response.json();
+    console.log("✅ Server response:", result); // Debug log
 
     if (response.ok && result.message) {
       successMsg.textContent = `✅ Order Successful! Total Price: ₹${result.totalPrice}. You will receive your product in 7 days.`;
@@ -59,7 +60,7 @@ orderForm.addEventListener("submit", async (e) => {
       alert("❌ Error: " + (result.error || "Unable to place order."));
     }
   } catch (err) {
-    console.error(err);
+    console.error("❌ Fetch error:", err);
     alert("❌ Error submitting order. Please try again.");
   }
 });
